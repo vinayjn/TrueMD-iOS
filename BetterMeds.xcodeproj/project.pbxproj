@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1AB8DAF1B010F2C00E41A0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AB8DAE1B010F2C00E41A0F /* main.m */; };
+		A1AB8DB21B010F2D00E41A0F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AB8DB11B010F2D00E41A0F /* AppDelegate.m */; };
+		A1AB8DB51B010F2D00E41A0F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AB8DB41B010F2D00E41A0F /* ViewController.m */; };
+		A1AB8DB81B010F2D00E41A0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1AB8DB61B010F2D00E41A0F /* Main.storyboard */; };
+		A1AB8DBA1B010F2D00E41A0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1AB8DB91B010F2D00E41A0F /* Images.xcassets */; };
+		A1AB8DBD1B010F2D00E41A0F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1AB8DBB1B010F2D00E41A0F /* LaunchScreen.xib */; };
+		A1AB8DC91B010F2D00E41A0F /* BetterMedsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AB8DC81B010F2D00E41A0F /* BetterMedsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1AB8DC31B010F2D00E41A0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1AB8DA11B010F2C00E41A0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1AB8DA81B010F2C00E41A0F;
+			remoteInfo = BetterMeds;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A1AB8DA91B010F2C00E41A0F /* BetterMeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterMeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1AB8DAD1B010F2C00E41A0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1AB8DAE1B010F2C00E41A0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1AB8DB01B010F2D00E41A0F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A1AB8DB11B010F2D00E41A0F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A1AB8DB31B010F2D00E41A0F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A1AB8DB41B010F2D00E41A0F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A1AB8DB71B010F2D00E41A0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A1AB8DB91B010F2D00E41A0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A1AB8DBC1B010F2D00E41A0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A1AB8DC21B010F2D00E41A0F /* BetterMedsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterMedsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1AB8DC71B010F2D00E41A0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1AB8DC81B010F2D00E41A0F /* BetterMedsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BetterMedsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1AB8DA61B010F2C00E41A0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1AB8DBF1B010F2D00E41A0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1AB8DA01B010F2C00E41A0F = {
+			isa = PBXGroup;
+			children = (
+				A1AB8DAB1B010F2C00E41A0F /* BetterMeds */,
+				A1AB8DC51B010F2D00E41A0F /* BetterMedsTests */,
+				A1AB8DAA1B010F2C00E41A0F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1AB8DAA1B010F2C00E41A0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1AB8DA91B010F2C00E41A0F /* BetterMeds.app */,
+				A1AB8DC21B010F2D00E41A0F /* BetterMedsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1AB8DAB1B010F2C00E41A0F /* BetterMeds */ = {
+			isa = PBXGroup;
+			children = (
+				A1AB8DB01B010F2D00E41A0F /* AppDelegate.h */,
+				A1AB8DB11B010F2D00E41A0F /* AppDelegate.m */,
+				A1AB8DB31B010F2D00E41A0F /* ViewController.h */,
+				A1AB8DB41B010F2D00E41A0F /* ViewController.m */,
+				A1AB8DB61B010F2D00E41A0F /* Main.storyboard */,
+				A1AB8DB91B010F2D00E41A0F /* Images.xcassets */,
+				A1AB8DBB1B010F2D00E41A0F /* LaunchScreen.xib */,
+				A1AB8DAC1B010F2C00E41A0F /* Supporting Files */,
+			);
+			path = BetterMeds;
+			sourceTree = "<group>";
+		};
+		A1AB8DAC1B010F2C00E41A0F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1AB8DAD1B010F2C00E41A0F /* Info.plist */,
+				A1AB8DAE1B010F2C00E41A0F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1AB8DC51B010F2D00E41A0F /* BetterMedsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1AB8DC81B010F2D00E41A0F /* BetterMedsTests.m */,
+				A1AB8DC61B010F2D00E41A0F /* Supporting Files */,
+			);
+			path = BetterMedsTests;
+			sourceTree = "<group>";
+		};
+		A1AB8DC61B010F2D00E41A0F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1AB8DC71B010F2D00E41A0F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1AB8DA81B010F2C00E41A0F /* BetterMeds */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1AB8DCC1B010F2D00E41A0F /* Build configuration list for PBXNativeTarget "BetterMeds" */;
+			buildPhases = (
+				A1AB8DA51B010F2C00E41A0F /* Sources */,
+				A1AB8DA61B010F2C00E41A0F /* Frameworks */,
+				A1AB8DA71B010F2C00E41A0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BetterMeds;
+			productName = BetterMeds;
+			productReference = A1AB8DA91B010F2C00E41A0F /* BetterMeds.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1AB8DC11B010F2D00E41A0F /* BetterMedsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1AB8DCF1B010F2D00E41A0F /* Build configuration list for PBXNativeTarget "BetterMedsTests" */;
+			buildPhases = (
+				A1AB8DBE1B010F2D00E41A0F /* Sources */,
+				A1AB8DBF1B010F2D00E41A0F /* Frameworks */,
+				A1AB8DC01B010F2D00E41A0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1AB8DC41B010F2D00E41A0F /* PBXTargetDependency */,
+			);
+			name = BetterMedsTests;
+			productName = BetterMedsTests;
+			productReference = A1AB8DC21B010F2D00E41A0F /* BetterMedsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1AB8DA11B010F2C00E41A0F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Vinay Jain";
+				TargetAttributes = {
+					A1AB8DA81B010F2C00E41A0F = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					A1AB8DC11B010F2D00E41A0F = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = A1AB8DA81B010F2C00E41A0F;
+					};
+				};
+			};
+			buildConfigurationList = A1AB8DA41B010F2C00E41A0F /* Build configuration list for PBXProject "BetterMeds" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1AB8DA01B010F2C00E41A0F;
+			productRefGroup = A1AB8DAA1B010F2C00E41A0F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1AB8DA81B010F2C00E41A0F /* BetterMeds */,
+				A1AB8DC11B010F2D00E41A0F /* BetterMedsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1AB8DA71B010F2C00E41A0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1AB8DB81B010F2D00E41A0F /* Main.storyboard in Resources */,
+				A1AB8DBD1B010F2D00E41A0F /* LaunchScreen.xib in Resources */,
+				A1AB8DBA1B010F2D00E41A0F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1AB8DC01B010F2D00E41A0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1AB8DA51B010F2C00E41A0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1AB8DB51B010F2D00E41A0F /* ViewController.m in Sources */,
+				A1AB8DB21B010F2D00E41A0F /* AppDelegate.m in Sources */,
+				A1AB8DAF1B010F2C00E41A0F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1AB8DBE1B010F2D00E41A0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1AB8DC91B010F2D00E41A0F /* BetterMedsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1AB8DC41B010F2D00E41A0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1AB8DA81B010F2C00E41A0F /* BetterMeds */;
+			targetProxy = A1AB8DC31B010F2D00E41A0F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A1AB8DB61B010F2D00E41A0F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1AB8DB71B010F2D00E41A0F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A1AB8DBB1B010F2D00E41A0F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1AB8DBC1B010F2D00E41A0F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A1AB8DCA1B010F2D00E41A0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1AB8DCB1B010F2D00E41A0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1AB8DCD1B010F2D00E41A0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BetterMeds/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A1AB8DCE1B010F2D00E41A0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BetterMeds/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A1AB8DD01B010F2D00E41A0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BetterMedsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetterMeds.app/BetterMeds";
+			};
+			name = Debug;
+		};
+		A1AB8DD11B010F2D00E41A0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BetterMedsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetterMeds.app/BetterMeds";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1AB8DA41B010F2C00E41A0F /* Build configuration list for PBXProject "BetterMeds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1AB8DCA1B010F2D00E41A0F /* Debug */,
+				A1AB8DCB1B010F2D00E41A0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1AB8DCC1B010F2D00E41A0F /* Build configuration list for PBXNativeTarget "BetterMeds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1AB8DCD1B010F2D00E41A0F /* Debug */,
+				A1AB8DCE1B010F2D00E41A0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A1AB8DCF1B010F2D00E41A0F /* Build configuration list for PBXNativeTarget "BetterMedsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1AB8DD01B010F2D00E41A0F /* Debug */,
+				A1AB8DD11B010F2D00E41A0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1AB8DA11B010F2C00E41A0F /* Project object */;
+}
