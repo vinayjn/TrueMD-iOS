@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A16E386F1B03E35F00A69506 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A16E386E1B03E35F00A69506 /* NetworkManager.m */; };
 		A1AB8DAF1B010F2C00E41A0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AB8DAE1B010F2C00E41A0F /* main.m */; };
 		A1AB8DB21B010F2D00E41A0F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AB8DB11B010F2D00E41A0F /* AppDelegate.m */; };
 		A1AB8DB51B010F2D00E41A0F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AB8DB41B010F2D00E41A0F /* ViewController.m */; };
 		A1AB8DB81B010F2D00E41A0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1AB8DB61B010F2D00E41A0F /* Main.storyboard */; };
 		A1AB8DBA1B010F2D00E41A0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1AB8DB91B010F2D00E41A0F /* Images.xcassets */; };
-		A1AB8DBD1B010F2D00E41A0F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1AB8DBB1B010F2D00E41A0F /* LaunchScreen.xib */; };
 		A1AB8DC91B010F2D00E41A0F /* BetterMedsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AB8DC81B010F2D00E41A0F /* BetterMedsTests.m */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A16E386D1B03E35F00A69506 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkManager.h; path = Model/NetworkManager.h; sourceTree = "<group>"; };
+		A16E386E1B03E35F00A69506 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkManager.m; path = Model/NetworkManager.m; sourceTree = "<group>"; };
 		A1AB8DA91B010F2C00E41A0F /* BetterMeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterMeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1AB8DAD1B010F2C00E41A0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1AB8DAE1B010F2C00E41A0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -36,7 +38,6 @@
 		A1AB8DB41B010F2D00E41A0F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A1AB8DB71B010F2D00E41A0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1AB8DB91B010F2D00E41A0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A1AB8DBC1B010F2D00E41A0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A1AB8DC21B010F2D00E41A0F /* BetterMedsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterMedsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1AB8DC71B010F2D00E41A0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1AB8DC81B010F2D00E41A0F /* BetterMedsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BetterMedsTests.m; sourceTree = "<group>"; };
@@ -60,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A16E386C1B03E31E00A69506 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A16E386D1B03E35F00A69506 /* NetworkManager.h */,
+				A16E386E1B03E35F00A69506 /* NetworkManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		A1AB8DA01B010F2C00E41A0F = {
 			isa = PBXGroup;
 			children = (
@@ -81,13 +91,11 @@
 		A1AB8DAB1B010F2C00E41A0F /* BetterMeds */ = {
 			isa = PBXGroup;
 			children = (
-				A1AB8DB01B010F2D00E41A0F /* AppDelegate.h */,
-				A1AB8DB11B010F2D00E41A0F /* AppDelegate.m */,
+				A16E386C1B03E31E00A69506 /* Model */,
 				A1AB8DB31B010F2D00E41A0F /* ViewController.h */,
 				A1AB8DB41B010F2D00E41A0F /* ViewController.m */,
 				A1AB8DB61B010F2D00E41A0F /* Main.storyboard */,
 				A1AB8DB91B010F2D00E41A0F /* Images.xcassets */,
-				A1AB8DBB1B010F2D00E41A0F /* LaunchScreen.xib */,
 				A1AB8DAC1B010F2C00E41A0F /* Supporting Files */,
 			);
 			path = BetterMeds;
@@ -96,6 +104,8 @@
 		A1AB8DAC1B010F2C00E41A0F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A1AB8DB01B010F2D00E41A0F /* AppDelegate.h */,
+				A1AB8DB11B010F2D00E41A0F /* AppDelegate.m */,
 				A1AB8DAD1B010F2C00E41A0F /* Info.plist */,
 				A1AB8DAE1B010F2C00E41A0F /* main.m */,
 			);
@@ -200,7 +210,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1AB8DB81B010F2D00E41A0F /* Main.storyboard in Resources */,
-				A1AB8DBD1B010F2D00E41A0F /* LaunchScreen.xib in Resources */,
 				A1AB8DBA1B010F2D00E41A0F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16E386F1B03E35F00A69506 /* NetworkManager.m in Sources */,
 				A1AB8DB51B010F2D00E41A0F /* ViewController.m in Sources */,
 				A1AB8DB21B010F2D00E41A0F /* AppDelegate.m in Sources */,
 				A1AB8DAF1B010F2C00E41A0F /* main.m in Sources */,
@@ -250,14 +260,6 @@
 				A1AB8DB71B010F2D00E41A0F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A1AB8DBB1B010F2D00E41A0F /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A1AB8DBC1B010F2D00E41A0F /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -299,7 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -337,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -349,7 +351,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BetterMeds/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -359,7 +363,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BetterMeds/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -418,6 +424,7 @@
 				A1AB8DCE1B010F2D00E41A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1AB8DCF1B010F2D00E41A0F /* Build configuration list for PBXNativeTarget "BetterMedsTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +433,7 @@
 				A1AB8DD11B010F2D00E41A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
