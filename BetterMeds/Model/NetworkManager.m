@@ -55,10 +55,9 @@
     NSString *requestString = [NSString stringWithFormat:@"%@%@",baseURL,pathComponent];
     
     NSURL *requestURL = [NSURL URLWithString:[requestString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    NSLog(@"%@",requestURL);
     NSURLSessionDataTask *dataTask = [self.session dataTaskWithURL:requestURL  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        //NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-        [self.delegate updateDataSourceWith:@{}];
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        [self.delegate updateDataSourceWith:[dict valueForKey:@"response"]];
         
     }];
     
@@ -67,12 +66,11 @@
 
 -(void)getMedicineSuggestionsForID:(NSString *)ID{
     
-    NSString *pathComponent = [NSString stringWithFormat:@"medicine_suggestions/?key=%@&id=%@&limit=20",API_KEY,ID];
+    NSString *pathComponent = [NSString stringWithFormat:@"medicine_suggestions/?key=%@&id=%@&limit=200",API_KEY,ID];
     
     NSString *requestString = [NSString stringWithFormat:@"%@%@",baseURL,pathComponent];
     
     NSURL *requestURL = [NSURL URLWithString:[requestString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    NSLog(@"%@",requestURL);
     NSURLSessionDataTask *dataTask = [self.session dataTaskWithURL:requestURL  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         
@@ -82,5 +80,23 @@
     
     [dataTask resume];
 }
+
+-(void)getMedicineAlternativesForID:(NSString *)ID{
+    
+    NSString *pathComponent = [NSString stringWithFormat:@"medicine_suggestions/?key=%@&id=%@&limit=200",API_KEY,ID];
+    
+    NSString *requestString = [NSString stringWithFormat:@"%@%@",baseURL,pathComponent];
+    
+    NSURL *requestURL = [NSURL URLWithString:[requestString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSURLSessionDataTask *dataTask = [self.session dataTaskWithURL:requestURL  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        
+        [self.delegate updateDataSourceWith:[dict valueForKeyPath:@"response.medicine_alternatives"]];
+        
+    }];
+    
+    [dataTask resume];
+}
+
 
 @end

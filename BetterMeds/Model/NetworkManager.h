@@ -23,6 +23,7 @@
 + (instancetype)sharedInstance;
 -(void)getMedicineDetailsForID:(NSString *)ID;
 -(void)getMedicineSuggestionsForID:(NSString *)ID;
+-(void)getMedicineAlternativesForID:(NSString *)ID;
 @property(weak,nonatomic) id <NetworkDelegate> delegate;
 
 @end
