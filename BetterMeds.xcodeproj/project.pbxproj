@@ -11,6 +11,7 @@
 		A16AE5591B08BBE1000F5371 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16AE5581B08BBE1000F5371 /* ViewController.m */; };
 		A16AE55C1B08C665000F5371 /* pill.png in Resources */ = {isa = PBXBuildFile; fileRef = A16AE55B1B08C665000F5371 /* pill.png */; };
 		A16E386F1B03E35F00A69506 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A16E386E1B03E35F00A69506 /* NetworkManager.m */; };
+		A18905641B2D9B0100F5A861 /* MedicineDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A18905631B2D9B0100F5A861 /* MedicineDetailsController.m */; };
 		A1AB8DAF1B010F2C00E41A0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AB8DAE1B010F2C00E41A0F /* main.m */; };
 		A1AB8DB21B010F2D00E41A0F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AB8DB11B010F2D00E41A0F /* AppDelegate.m */; };
 		A1AB8DB81B010F2D00E41A0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1AB8DB61B010F2D00E41A0F /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 		A16AE55B1B08C665000F5371 /* pill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pill.png; sourceTree = "<group>"; };
 		A16E386D1B03E35F00A69506 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkManager.h; path = Model/NetworkManager.h; sourceTree = "<group>"; };
 		A16E386E1B03E35F00A69506 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkManager.m; path = Model/NetworkManager.m; sourceTree = "<group>"; };
+		A18905621B2D9B0100F5A861 /* MedicineDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MedicineDetailsController.h; path = Controllers/MedicineDetailsController.h; sourceTree = "<group>"; };
+		A18905631B2D9B0100F5A861 /* MedicineDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MedicineDetailsController.m; path = Controllers/MedicineDetailsController.m; sourceTree = "<group>"; };
 		A1AB8DA91B010F2C00E41A0F /* BetterMeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterMeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1AB8DAD1B010F2C00E41A0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1AB8DAE1B010F2C00E41A0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -73,6 +76,8 @@
 				A16AE5581B08BBE1000F5371 /* ViewController.m */,
 				A16AE5541B08BB7C000F5371 /* MedicineInfoController.h */,
 				A16AE5551B08BB7C000F5371 /* MedicineInfoController.m */,
+				A18905621B2D9B0100F5A861 /* MedicineDetailsController.h */,
+				A18905631B2D9B0100F5A861 /* MedicineDetailsController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				A1AB8DB21B010F2D00E41A0F /* AppDelegate.m in Sources */,
 				A1AB8DAF1B010F2C00E41A0F /* main.m in Sources */,
 				A16AE5561B08BB7C000F5371 /* MedicineInfoController.m in Sources */,
+				A18905641B2D9B0100F5A861 /* MedicineDetailsController.m in Sources */,
 				A16AE5591B08BBE1000F5371 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
