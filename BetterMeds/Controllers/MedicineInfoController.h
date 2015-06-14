@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MedicineDetailsController : UIViewController
+@interface MedicineInfoController : UIViewController
 
 @property(strong,nonatomic) NSString * medicineID;
 @property (strong, nonatomic) IBOutlet UILabel *medicineLabel;
-
 @end
