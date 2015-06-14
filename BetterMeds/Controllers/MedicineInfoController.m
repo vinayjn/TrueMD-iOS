@@ -7,6 +7,7 @@
 //
 
 #import "MedicineInfoController.h"
+#import "MedicineDetailsController.h"
 #import "NetworkManager.h"
 
 @interface MedicineInfoController ()<NetworkDelegate>{
@@ -16,6 +17,9 @@
     NSDictionary *medDetails;
     NSArray * medAlternatives;
 }
+
+@property (weak, nonatomic) IBOutlet UIButton *detailsButton;
+@property (weak, nonatomic) IBOutlet UIButton *alternativeButton;
 @end
 
 @implementation MedicineInfoController
@@ -24,7 +28,7 @@
 {
     self = [super init];
     if (self) {
-        self = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"medicineDetailsController"];
+        self = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"MedicineInfoController"];
         
     }
     return self;
@@ -32,9 +36,14 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    self.navigationController.navigationBarHidden = NO;
     self.medicineLabel.text = self.medicineID;
     [NetworkManager sharedInstance].delegate = self;
+    self.navigationController.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor] };
+    self.title = @"Medicine Info";
     
+    self.detailsButton.layer.borderColor = [UIColor colorWithRed:0.241 green:0.513 blue:0.751 alpha:1].CGColor;
+    self.alternativeButton.layer.borderColor = [UIColor colorWithRed:0.241 green:0.513 blue:0.751 alpha:1].CGColor;
 }
 - (IBAction)getMedAlternates:(UIButton *)sender {
     
@@ -61,6 +70,10 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [indicator stopAnimating];
             medDetails = dataSource;
+            MedicineDetailsController *obj = [MedicineDetailsController new];
+            obj.medicineDetails = medDetails;
+            [self.navigationController pushViewController:obj animated:YES];
+            
         });
     }
     else{
