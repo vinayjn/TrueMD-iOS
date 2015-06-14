@@ -25,10 +25,20 @@
 
 @implementation ViewController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"ViewController"];
+        
+    }
+    return self;
+}
 -(void)viewDidLoad{
     
+    self.navigationController.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor] };
+    self.title = @"Search";
     [NetworkManager sharedInstance].delegate = self;
-    self.navigationController.navigationBarHidden= true;
 }
 
 -(void)viewDidLayoutSubviews{
