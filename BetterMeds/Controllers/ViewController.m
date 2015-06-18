@@ -39,6 +39,10 @@
     self.navigationController.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor] };
     self.title = @"Search";
     [NetworkManager sharedInstance].delegate = self;
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
+
 }
 
 -(void)viewDidLayoutSubviews{
