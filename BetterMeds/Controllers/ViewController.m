@@ -4,19 +4,20 @@
 //
 //  Created by Vinay Jain on 5/11/15.
 //  Copyright (c) 2015 Vinay Jain. All rights reserved.
-//http://www.truemd.in/api/medicine_alternatives/?key=fab7267c813d0fe819437deef957ac&id=crocin&limit=10
+
 
 #import "ViewController.h"
-#import "MedicineInfoController.h"
+#import "MedicineDetailsController.h"
 #import "NetworkManager.h"
 
-@interface ViewController ()<UITextFieldDelegate,NetworkDelegate,UITableViewDataSource,UITableViewDelegate>{
+@interface ViewController ()<UITextFieldDelegate,NetworkDelegate,UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>{
     
     NSArray *medicineData;
     __weak IBOutlet UITableView *medicines;
 }
-
+@property int failedCount;
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *headers;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topSpace;
@@ -30,7 +31,6 @@
     self = [super init];
     if (self) {
         self = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"ViewController"];
-        
     }
     return self;
 }
@@ -39,6 +39,18 @@
     self.navigationController.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor] };
     self.title = @"Search";
     [NetworkManager sharedInstance].delegate = self;
+    
+    [self.searchField addTarget:self
+                         action:@selector(textFieldTextDidChange:)
+               forControlEvents:UIControlEventEditingChanged];
+    
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
+    
+    medicines.hidden = true;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onKeyboardHide) name:UIKeyboardDidHideNotification object:nil];
 }
 
 -(void)viewDidLayoutSubviews{
@@ -54,9 +66,15 @@
 }
 
 -(void)textFieldTextDidChange:(UITextField *)textField{
+    
     if (textField.text.length > 2 ) {
+        [self.indicator startAnimating];
         [[NetworkManager sharedInstance] getMedicineSuggestionsForID:textField.text];
     }
+    else{
+        [self.indicator stopAnimating];
+    }
+    self.failedCount = 0;
     
 }
 
@@ -76,9 +94,10 @@
 
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
-
+    
     if ([textField.text isEqualToString:@""]) {
         medicineData = nil;
+        [self.indicator stopAnimating];
         [medicines reloadData];
     }
     
@@ -92,6 +111,7 @@
         [self.view layoutIfNeeded];
         
     }];
+    
     return true;
 }
 
@@ -121,20 +141,47 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    MedicineInfoController *medicieDetailsController = [MedicineInfoController new];
+    MedicineDetailsController *medicineDetailsController = [MedicineDetailsController new];
     
-    medicieDetailsController.medicineID= [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
+    medicineDetailsController.medicineID= [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
     
-    [self.navigationController showViewController:medicieDetailsController sender:nil];
+    [self.navigationController pushViewController:medicineDetailsController animated:YES];
+    
+}
+
+-(void)onKeyboardHide{
+    
+    if ([self.searchField.text length]>2) {
+        medicines.hidden = true;
+    }
     
 }
 
 -(void)updateDataSourceWith:(id)dataSource{
     
     dispatch_async(dispatch_get_main_queue(), ^{
+        [self.indicator stopAnimating];
         medicineData = (NSArray*)dataSource;
+        medicines.hidden = false;
         [medicines reloadData];
     });
     
 }
+
+-(void)requestFailedWithError:(int)errorCode{
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.indicator stopAnimating];
+        
+        if (errorCode == NSURLErrorTimedOut) {
+            if (self.failedCount < 1 && [self.searchField.text length] > 2) {
+        
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Request Failed" message:@"Something went wrong, the app cannot connect to the web service" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                [alert show];
+                self.failedCount++;
+            }
+        }
+    });
+}
+
 @end

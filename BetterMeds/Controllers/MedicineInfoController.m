@@ -29,6 +29,7 @@
     self = [super init];
     if (self) {
         self = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"MedicineInfoController"];
+        self.title = @"Medicine Info";
         
     }
     return self;
@@ -36,14 +37,18 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    
     self.navigationController.navigationBarHidden = NO;
     self.medicineLabel.text = self.medicineID;
     [NetworkManager sharedInstance].delegate = self;
     self.navigationController.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor] };
-    self.title = @"Medicine Info";
+    
     
     self.detailsButton.layer.borderColor = [UIColor colorWithRed:0.241 green:0.513 blue:0.751 alpha:1].CGColor;
     self.alternativeButton.layer.borderColor = [UIColor colorWithRed:0.241 green:0.513 blue:0.751 alpha:1].CGColor;
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
 }
 - (IBAction)getMedAlternates:(UIButton *)sender {
     

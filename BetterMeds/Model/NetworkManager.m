@@ -14,10 +14,9 @@
 @interface NetworkManager (){
     
     NSString *baseURL;
+    NSURLSessionConfiguration *sessionConfiguration;
     
 }
-
-@property (strong,nonatomic) NSURLSession *session;
 
 @end
 
@@ -25,7 +24,9 @@
 
 -(NSURLSession *)session{
     if (!_session) {
-        _session = [NSURLSession sharedSession];
+        sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        sessionConfiguration.timeoutIntervalForRequest = 15.0;
+        _session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
     }
     return _session;
 }
@@ -57,7 +58,8 @@
     NSURL *requestURL = [NSURL URLWithString:[requestString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSURLSessionDataTask *dataTask = [self.session dataTaskWithURL:requestURL  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-        [self.delegate updateDataSourceWith:[dict valueForKey:@"response"]];
+        
+        [self.delegate updateDataSourceWith:[dict valueForKeyPath:@"response"]];
         
     }];
     
@@ -71,19 +73,30 @@
     NSString *requestString = [NSString stringWithFormat:@"%@%@",baseURL,pathComponent];
     
     NSURL *requestURL = [NSURL URLWithString:[requestString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    NSURLSessionDataTask *dataTask = [self.session dataTaskWithURL:requestURL  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-        
-        [self.delegate updateDataSourceWith:[dict valueForKeyPath:@"response.suggestions"]];
+
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
+    
+    //request.timeoutInterval = 15.0;
+    
+    NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSError *jsonError;
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
+        if (error) {
+            [self.delegate requestFailedWithError:(int)error.code];
+            }
+        else if (dict){
+            [self.delegate updateDataSourceWith:[dict valueForKeyPath:@"response.suggestions"]];
+            }
         
     }];
     
     [dataTask resume];
+    
 }
 
 -(void)getMedicineAlternativesForID:(NSString *)ID{
     
-    NSString *pathComponent = [NSString stringWithFormat:@"medicine_suggestions/?key=%@&id=%@&limit=200",API_KEY,ID];
+    NSString *pathComponent = [NSString stringWithFormat:@"medicine_alternatives/?key=%@&id=%@&limit=10",API_KEY,ID];
     
     NSString *requestString = [NSString stringWithFormat:@"%@%@",baseURL,pathComponent];
     
