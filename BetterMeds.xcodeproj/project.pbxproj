@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A16AE5561B08BB7C000F5371 /* MedicineInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16AE5551B08BB7C000F5371 /* MedicineInfoController.m */; };
 		A16AE5591B08BBE1000F5371 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16AE5581B08BBE1000F5371 /* ViewController.m */; };
 		A16AE55C1B08C665000F5371 /* pill.png in Resources */ = {isa = PBXBuildFile; fileRef = A16AE55B1B08C665000F5371 /* pill.png */; };
 		A16E386F1B03E35F00A69506 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A16E386E1B03E35F00A69506 /* NetworkManager.m */; };
@@ -19,8 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A16AE5541B08BB7C000F5371 /* MedicineInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MedicineInfoController.h; path = Controllers/MedicineInfoController.h; sourceTree = "<group>"; };
-		A16AE5551B08BB7C000F5371 /* MedicineInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MedicineInfoController.m; path = Controllers/MedicineInfoController.m; sourceTree = "<group>"; };
 		A16AE5571B08BBE1000F5371 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Controllers/ViewController.h; sourceTree = "<group>"; };
 		A16AE5581B08BBE1000F5371 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Controllers/ViewController.m; sourceTree = "<group>"; };
 		A16AE55B1B08C665000F5371 /* pill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pill.png; sourceTree = "<group>"; };
@@ -55,8 +52,6 @@
 			children = (
 				A16AE5571B08BBE1000F5371 /* ViewController.h */,
 				A16AE5581B08BBE1000F5371 /* ViewController.m */,
-				A16AE5541B08BB7C000F5371 /* MedicineInfoController.h */,
-				A16AE5551B08BB7C000F5371 /* MedicineInfoController.m */,
 				A18905621B2D9B0100F5A861 /* MedicineDetailsController.h */,
 				A18905631B2D9B0100F5A861 /* MedicineDetailsController.m */,
 			);
@@ -211,7 +206,6 @@
 				A16E386F1B03E35F00A69506 /* NetworkManager.m in Sources */,
 				A1AB8DB21B010F2D00E41A0F /* AppDelegate.m in Sources */,
 				A1AB8DAF1B010F2C00E41A0F /* main.m in Sources */,
-				A16AE5561B08BB7C000F5371 /* MedicineInfoController.m in Sources */,
 				A18905641B2D9B0100F5A861 /* MedicineDetailsController.m in Sources */,
 				A16AE5591B08BBE1000F5371 /* ViewController.m in Sources */,
 			);

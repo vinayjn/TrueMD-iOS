@@ -9,8 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MedicineDetailsController : UIViewController
-
 @property (strong,nonatomic) NSDictionary *medicineDetails;
-
-@property(strong,nonatomic) NSString * medicineID;
 @end
