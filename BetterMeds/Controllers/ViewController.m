@@ -14,10 +14,12 @@
     
     NSArray *medicineData;
     __weak IBOutlet UITableView *medicines;
+    int tag;
 }
 @property int failedCount;
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *centralIndicator;
 
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *headers;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topSpace;
@@ -69,6 +71,7 @@
     
     if (textField.text.length > 2 ) {
         [self.indicator startAnimating];
+        tag = 1;
         [[NetworkManager sharedInstance] getMedicineSuggestionsForID:textField.text];
     }
     else{
@@ -141,17 +144,15 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    MedicineDetailsController *medicineDetailsController = [MedicineDetailsController new];
-    
-    medicineDetailsController.medicineID= [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
-    
-    [self.navigationController pushViewController:medicineDetailsController animated:YES];
-    
+    [self.centralIndicator startAnimating];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    [[NetworkManager sharedInstance] getMedicineDetailsForID:[tableView cellForRowAtIndexPath:indexPath].textLabel.text];
+    tag = 2;
 }
 
 -(void)onKeyboardHide{
     
-    if ([self.searchField.text length]>2) {
+    if ([self.searchField.text length] < 2) {
         medicines.hidden = true;
     }
     
@@ -160,10 +161,19 @@
 -(void)updateDataSourceWith:(id)dataSource{
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.indicator stopAnimating];
-        medicineData = (NSArray*)dataSource;
-        medicines.hidden = false;
-        [medicines reloadData];
+        if (tag == 1) {
+            [self.indicator stopAnimating];
+            medicineData = (NSArray*)dataSource;
+            medicines.hidden = false;
+            [medicines reloadData];
+        }
+        else if(tag == 2){
+            [self.centralIndicator stopAnimating];
+            [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+            MedicineDetailsController *medicineDetailsController = [MedicineDetailsController new];
+            medicineDetailsController.medicineDetails = (NSDictionary *)dataSource;
+            [self.navigationController pushViewController:medicineDetailsController animated:YES];
+        }
     });
     
 }
