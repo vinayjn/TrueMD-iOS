@@ -31,7 +31,6 @@
     self = [super init];
     if (self) {
         self = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"ViewController"];
-        
     }
     return self;
 }
@@ -48,6 +47,10 @@
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButton;
+    
+    medicines.hidden = true;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onKeyboardHide) name:UIKeyboardDidHideNotification object:nil];
 }
 
 -(void)viewDidLayoutSubviews{
@@ -145,11 +148,21 @@
     [self.navigationController showViewController:medicieDetailsController sender:nil];
     
 }
+
+-(void)onKeyboardHide{
+    
+    if ([self.searchField.text length]>2) {
+        medicines.hidden = true;
+    }
+    
+}
+
 -(void)updateDataSourceWith:(id)dataSource{
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.indicator stopAnimating];
         medicineData = (NSArray*)dataSource;
+        medicines.hidden = false;
         [medicines reloadData];
     });
     
@@ -161,7 +174,7 @@
         [self.indicator stopAnimating];
         
         if (errorCode == NSURLErrorTimedOut) {
-            if (self.failedCount < 1) {
+            if (self.failedCount < 1 && [self.searchField.text length] > 2) {
         
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Request Failed" message:@"Something went wrong, the app cannot connect to the web service" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
                 [alert show];
