@@ -27,7 +27,8 @@
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vcObj];
     [navigationController.navigationBar setBarTintColor:[UIColor redColor]];
     [navigationController.navigationBar setTintColor:[UIColor colorWithRed:0.95 green:0.943 blue:0.937 alpha:1]];
-    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
     self.window.rootViewController = navigationController;
     return YES;
 }
