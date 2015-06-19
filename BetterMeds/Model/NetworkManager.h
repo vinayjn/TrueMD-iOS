@@ -15,6 +15,9 @@
 
 -(void)updateDataSourceWith:(id) dataSource;
 
+@optional
+-(void)requestFailedWithError:(int)errorCode;
+
 @end
 
 
@@ -25,5 +28,5 @@
 -(void)getMedicineSuggestionsForID:(NSString *)ID;
 -(void)getMedicineAlternativesForID:(NSString *)ID;
 @property(weak,nonatomic) id <NetworkDelegate> delegate;
-
+@property (strong,nonatomic) NSURLSession *session;
 @end
