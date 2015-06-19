@@ -16,18 +16,7 @@
 		A1AB8DB21B010F2D00E41A0F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AB8DB11B010F2D00E41A0F /* AppDelegate.m */; };
 		A1AB8DB81B010F2D00E41A0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1AB8DB61B010F2D00E41A0F /* Main.storyboard */; };
 		A1AB8DBA1B010F2D00E41A0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1AB8DB91B010F2D00E41A0F /* Images.xcassets */; };
-		A1AB8DC91B010F2D00E41A0F /* BetterMedsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AB8DC81B010F2D00E41A0F /* BetterMedsTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A1AB8DC31B010F2D00E41A0F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A1AB8DA11B010F2C00E41A0F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A1AB8DA81B010F2C00E41A0F;
-			remoteInfo = BetterMeds;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A16AE5541B08BB7C000F5371 /* MedicineInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MedicineInfoController.h; path = Controllers/MedicineInfoController.h; sourceTree = "<group>"; };
@@ -46,20 +35,12 @@
 		A1AB8DB11B010F2D00E41A0F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A1AB8DB71B010F2D00E41A0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1AB8DB91B010F2D00E41A0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A1AB8DC21B010F2D00E41A0F /* BetterMedsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterMedsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1AB8DC71B010F2D00E41A0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1AB8DC81B010F2D00E41A0F /* BetterMedsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BetterMedsTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A1AB8DA61B010F2C00E41A0F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A1AB8DBF1B010F2D00E41A0F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -112,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				A1AB8DA91B010F2C00E41A0F /* BetterMeds.app */,
-				A1AB8DC21B010F2D00E41A0F /* BetterMedsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,24 +158,6 @@
 			productReference = A1AB8DA91B010F2C00E41A0F /* BetterMeds.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A1AB8DC11B010F2D00E41A0F /* BetterMedsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A1AB8DCF1B010F2D00E41A0F /* Build configuration list for PBXNativeTarget "BetterMedsTests" */;
-			buildPhases = (
-				A1AB8DBE1B010F2D00E41A0F /* Sources */,
-				A1AB8DBF1B010F2D00E41A0F /* Frameworks */,
-				A1AB8DC01B010F2D00E41A0F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A1AB8DC41B010F2D00E41A0F /* PBXTargetDependency */,
-			);
-			name = BetterMedsTests;
-			productName = BetterMedsTests;
-			productReference = A1AB8DC21B010F2D00E41A0F /* BetterMedsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,10 +169,6 @@
 				TargetAttributes = {
 					A1AB8DA81B010F2C00E41A0F = {
 						CreatedOnToolsVersion = 6.3;
-					};
-					A1AB8DC11B010F2D00E41A0F = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = A1AB8DA81B010F2C00E41A0F;
 					};
 				};
 			};
@@ -228,7 +186,6 @@
 			projectRoot = "";
 			targets = (
 				A1AB8DA81B010F2C00E41A0F /* BetterMeds */,
-				A1AB8DC11B010F2D00E41A0F /* BetterMedsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -241,13 +198,6 @@
 				A1AB8DB81B010F2D00E41A0F /* Main.storyboard in Resources */,
 				A1AB8DBA1B010F2D00E41A0F /* Images.xcassets in Resources */,
 				A16AE55C1B08C665000F5371 /* pill.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A1AB8DC01B010F2D00E41A0F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,23 +217,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A1AB8DBE1B010F2D00E41A0F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A1AB8DC91B010F2D00E41A0F /* BetterMedsTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A1AB8DC41B010F2D00E41A0F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A1AB8DA81B010F2C00E41A0F /* BetterMeds */;
-			targetProxy = A1AB8DC31B010F2D00E41A0F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A1AB8DB61B010F2D00E41A0F /* Main.storyboard */ = {
@@ -314,7 +248,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nilesh Vartak (5NVKYMQU7P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nilesh Vartak (5NVKYMQU7P)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -336,6 +271,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "c2092a79-5e99-4062-89ec-12d9ee09aed9";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -358,7 +294,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nilesh Vartak (5NVKYMQU7P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nilesh Vartak (5NVKYMQU7P)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -373,6 +310,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "c2092a79-5e99-4062-89ec-12d9ee09aed9";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -384,10 +322,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nilesh Vartak (5NVKYMQU7P)";
 				INFOPLIST_FILE = BetterMeds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c2092a79-5e99-4062-89ec-12d9ee09aed9";
 			};
 			name = Debug;
 		};
@@ -396,44 +336,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nilesh Vartak (5NVKYMQU7P)";
 				INFOPLIST_FILE = BetterMeds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		A1AB8DD01B010F2D00E41A0F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BetterMedsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetterMeds.app/BetterMeds";
-			};
-			name = Debug;
-		};
-		A1AB8DD11B010F2D00E41A0F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BetterMedsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetterMeds.app/BetterMeds";
+				PROVISIONING_PROFILE = "c2092a79-5e99-4062-89ec-12d9ee09aed9";
 			};
 			name = Release;
 		};
@@ -454,15 +362,6 @@
 			buildConfigurations = (
 				A1AB8DCD1B010F2D00E41A0F /* Debug */,
 				A1AB8DCE1B010F2D00E41A0F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A1AB8DCF1B010F2D00E41A0F /* Build configuration list for PBXNativeTarget "BetterMedsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A1AB8DD01B010F2D00E41A0F /* Debug */,
-				A1AB8DD11B010F2D00E41A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

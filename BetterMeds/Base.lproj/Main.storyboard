@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
@@ -84,6 +84,9 @@
                                     <outlet property="delegate" destination="qNC-wu-9pq" id="9SS-L3-gIu"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="FP9-9A-dgY">
+                                <rect key="frame" x="540" y="198" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -91,18 +94,22 @@
                             <constraint firstItem="Leg-2q-5Re" firstAttribute="top" secondItem="963-UD-iD5" secondAttribute="bottom" constant="170" id="6Pm-5u-ziK"/>
                             <constraint firstItem="Y6O-gU-tw9" firstAttribute="leading" secondItem="lUX-nd-7wm" secondAttribute="leading" constant="40" id="9d6-vv-dEV"/>
                             <constraint firstAttribute="centerX" secondItem="z1w-WT-YBg" secondAttribute="centerX" id="J3U-Jx-hFF"/>
+                            <constraint firstItem="Leg-2q-5Re" firstAttribute="centerY" secondItem="FP9-9A-dgY" secondAttribute="centerY" constant="-0.5" id="Oh1-jY-maa"/>
                             <constraint firstItem="hd5-gb-Uka" firstAttribute="top" secondItem="963-UD-iD5" secondAttribute="bottom" constant="10" id="Qwx-qx-HBq"/>
                             <constraint firstItem="Leg-2q-5Re" firstAttribute="leading" secondItem="lUX-nd-7wm" secondAttribute="leading" constant="40" id="T6K-tK-AGw"/>
                             <constraint firstAttribute="trailing" secondItem="Y6O-gU-tw9" secondAttribute="trailing" constant="40" id="XF4-uD-f0F"/>
+                            <constraint firstItem="Leg-2q-5Re" firstAttribute="bottom" secondItem="FP9-9A-dgY" secondAttribute="bottom" constant="7" id="Z1N-v1-Z2f"/>
                             <constraint firstItem="z1w-WT-YBg" firstAttribute="top" secondItem="hd5-gb-Uka" secondAttribute="bottom" constant="8" id="bog-Ff-Mdb"/>
                             <constraint firstItem="Y6O-gU-tw9" firstAttribute="top" secondItem="Leg-2q-5Re" secondAttribute="bottom" constant="1" id="cO7-JR-3BQ"/>
                             <constraint firstAttribute="centerX" secondItem="Leg-2q-5Re" secondAttribute="centerX" id="cwx-Jg-QXq"/>
+                            <constraint firstItem="FP9-9A-dgY" firstAttribute="leading" secondItem="Leg-2q-5Re" secondAttribute="trailing" constant="-20" id="f6b-Xb-6PQ"/>
                             <constraint firstAttribute="trailing" secondItem="Leg-2q-5Re" secondAttribute="trailing" constant="40" id="k1r-Bk-hbc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Li2-Ce-MIx"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="indicator" destination="FP9-9A-dgY" id="NdJ-Kb-dOD"/>
                         <outlet property="medicines" destination="Y6O-gU-tw9" id="rlJ-Y0-5PL"/>
                         <outlet property="searchField" destination="Leg-2q-5Re" id="K50-2N-aVD"/>
                         <outlet property="topSpace" destination="6Pm-5u-ziK" id="OXj-M2-3ZC"/>
@@ -126,7 +133,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="195" translatesAutoresizingMaskIntoConstraints="NO" id="yHB-kG-9ak">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="560" translatesAutoresizingMaskIntoConstraints="NO" id="yHB-kG-9ak">
                                 <rect key="frame" x="20" y="227" width="560" height="0.0"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -156,7 +163,7 @@
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💊💉" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seb-9M-yNW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💊💉" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="seb-9M-yNW">
                                 <rect key="frame" x="200" y="72" width="200" height="120"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="100"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -225,26 +232,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Reco Enterprises" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URZ-i7-U42">
-                                <rect key="frame" x="16" y="65" width="568" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Reco Enterprises" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="560" translatesAutoresizingMaskIntoConstraints="NO" id="URZ-i7-U42">
+                                <rect key="frame" x="20" y="77" width="560" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                 <color key="textColor" red="0.098039217293262482" green="0.14117647707462311" blue="0.18823529779911041" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Levo (500 Mg)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epd-fN-Gr4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Levo (500 Mg)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="560" translatesAutoresizingMaskIntoConstraints="NO" id="epd-fN-Gr4">
                                 <rect key="frame" x="20" y="28" width="560" height="29"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                 <color key="textColor" red="0.015686275437474251" green="0.49803921580314636" blue="0.72156864404678345" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="20 Rs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrp-Ah-G3T">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="20 Rs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="51" translatesAutoresizingMaskIntoConstraints="NO" id="Nrp-Ah-G3T">
                                 <rect key="frame" x="508" y="194" width="51" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                 <color key="textColor" red="0.098039217293262482" green="0.14117647707462311" blue="0.18823529779911041" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 Tablets" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmt-pQ-L4u">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 Tablets" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="86" translatesAutoresizingMaskIntoConstraints="NO" id="Cmt-pQ-L4u">
                                 <rect key="frame" x="20" y="194" width="86" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                 <color key="textColor" red="0.098039217293262482" green="0.14117647707462311" blue="0.18823529779911041" alpha="1" colorSpace="calibratedRGB"/>
