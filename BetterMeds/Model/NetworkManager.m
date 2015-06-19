@@ -85,7 +85,7 @@
             [self.delegate requestFailedWithError:(int)error.code];
             }
         else if (dict){
-            [self.delegate updateDataSourceWith:[dict valueForKey:@"response.suggestions"]];
+            [self.delegate updateDataSourceWith:[dict valueForKeyPath:@"response.suggestions"]];
             }
         
     }];

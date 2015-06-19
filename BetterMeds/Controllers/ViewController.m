@@ -7,7 +7,7 @@
 
 
 #import "ViewController.h"
-#import "MedicineInfoController.h"
+#import "MedicineDetailsController.h"
 #import "NetworkManager.h"
 
 @interface ViewController ()<UITextFieldDelegate,NetworkDelegate,UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>{
@@ -141,11 +141,11 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    MedicineInfoController *medicieDetailsController = [MedicineInfoController new];
+    MedicineDetailsController *medicineDetailsController = [MedicineDetailsController new];
     
-    medicieDetailsController.medicineID= [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
+    medicineDetailsController.medicineID= [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
     
-    [self.navigationController showViewController:medicieDetailsController sender:nil];
+    [self.navigationController pushViewController:medicineDetailsController animated:YES];
     
 }
 
