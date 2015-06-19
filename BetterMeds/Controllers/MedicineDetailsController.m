@@ -8,10 +8,24 @@
 
 #import "MedicineDetailsController.h"
 
+@interface AlternateCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *alterName;
+@property (weak, nonatomic) IBOutlet UILabel *alterTablets;
+@property (weak, nonatomic) IBOutlet UILabel *alterPrice;
+
+@end
+
+@implementation AlternateCell
+
+@end
+
 @interface MedicineDetailsController ()
 @property (weak, nonatomic) IBOutlet UILabel *medicineName;
 @property (weak, nonatomic) IBOutlet UILabel *price;
 @property (weak, nonatomic) IBOutlet UILabel *composition;
+@property (weak, nonatomic) IBOutlet UILabel *manufacturer;
+@property (weak, nonatomic) IBOutlet UILabel *tablets;
+@property (weak, nonatomic) IBOutlet UILabel *tabletType;
 
 @end
 
@@ -37,20 +51,10 @@
     
     self.navigationController.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor] };
     self.title = @"Medicine Details";
-    self.medicineName.text = [self.medicineDetails valueForKeyPath:@"medicine.brand"];
+    //self.medicineName.text = [self.medicineDetails valueForKeyPath:@"medicine.brand"];
     
     
     
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
