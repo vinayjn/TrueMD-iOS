@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
@@ -87,6 +87,9 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="FP9-9A-dgY">
                                 <rect key="frame" x="540" y="198" width="20" height="20"/>
                             </activityIndicatorView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="HEd-8k-Jl5">
+                                <rect key="frame" x="282" y="282" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -102,6 +105,8 @@
                             <constraint firstItem="z1w-WT-YBg" firstAttribute="top" secondItem="hd5-gb-Uka" secondAttribute="bottom" constant="8" id="bog-Ff-Mdb"/>
                             <constraint firstItem="Y6O-gU-tw9" firstAttribute="top" secondItem="Leg-2q-5Re" secondAttribute="bottom" constant="1" id="cO7-JR-3BQ"/>
                             <constraint firstAttribute="centerX" secondItem="Leg-2q-5Re" secondAttribute="centerX" id="cwx-Jg-QXq"/>
+                            <constraint firstAttribute="centerX" secondItem="HEd-8k-Jl5" secondAttribute="centerX" id="dgz-5A-ESq"/>
+                            <constraint firstAttribute="centerY" secondItem="HEd-8k-Jl5" secondAttribute="centerY" id="e8v-kB-PNx"/>
                             <constraint firstItem="FP9-9A-dgY" firstAttribute="leading" secondItem="Leg-2q-5Re" secondAttribute="trailing" constant="-20" id="f6b-Xb-6PQ"/>
                             <constraint firstAttribute="trailing" secondItem="Leg-2q-5Re" secondAttribute="trailing" constant="40" id="k1r-Bk-hbc"/>
                         </constraints>
@@ -109,6 +114,7 @@
                     <navigationItem key="navigationItem" id="Li2-Ce-MIx"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="centralIndicator" destination="HEd-8k-Jl5" id="kEK-9k-C8a"/>
                         <outlet property="indicator" destination="FP9-9A-dgY" id="NdJ-Kb-dOD"/>
                         <outlet property="medicines" destination="Y6O-gU-tw9" id="rlJ-Y0-5PL"/>
                         <outlet property="searchField" destination="Leg-2q-5Re" id="K50-2N-aVD"/>
@@ -166,7 +172,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💊💉" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="seb-9M-yNW">
                                 <rect key="frame" x="200" y="72" width="200" height="120"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="100"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEE-YL-swF">
@@ -248,7 +254,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5c-2J-7Kc">
                                 <rect key="frame" x="53" y="79" width="91" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="pcJ-S4-bAk">
@@ -299,7 +305,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Composition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEt-Dc-7bw">
                                 <rect key="frame" x="53" y="192" width="106" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flask" translatesAutoresizingMaskIntoConstraints="NO" id="IZi-lR-CwF">
@@ -319,7 +325,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Constituents" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="560" translatesAutoresizingMaskIntoConstraints="NO" id="2XF-22-eGS">
-                                        <rect key="frame" x="8" y="8" width="79" height="18"/>
+                                        <rect key="frame" x="8" y="8" width="544" height="18"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                         <color key="textColor" red="0.14901961389999999" green="0.23137255009999999" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -338,7 +344,9 @@
                                     <constraint firstItem="3Vg-uH-K0t" firstAttribute="top" secondItem="2XF-22-eGS" secondAttribute="bottom" constant="8" id="7n2-B7-km6"/>
                                     <constraint firstItem="8eo-R1-reo" firstAttribute="leading" secondItem="3Vg-uH-K0t" secondAttribute="trailing" constant="8" id="Mll-3M-4v5"/>
                                     <constraint firstItem="2XF-22-eGS" firstAttribute="leading" secondItem="TSm-4p-H4V" secondAttribute="leading" constant="8" id="RSO-YD-cj2"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Vg-uH-K0t" secondAttribute="bottom" constant="8" id="al6-C8-3aA"/>
                                     <constraint firstItem="3Vg-uH-K0t" firstAttribute="leading" secondItem="TSm-4p-H4V" secondAttribute="leading" constant="8" id="efj-1s-BLO"/>
+                                    <constraint firstAttribute="trailing" secondItem="2XF-22-eGS" secondAttribute="trailing" constant="8" id="jWa-0v-EAP"/>
                                     <constraint firstItem="2XF-22-eGS" firstAttribute="top" secondItem="TSm-4p-H4V" secondAttribute="top" constant="8" id="yfd-lZ-wpT"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -350,7 +358,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alternates" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sO2-ns-UuV">
                                 <rect key="frame" x="53" y="302" width="82" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="OxU-dj-srQ">
@@ -363,11 +371,11 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="AoH-4p-m3b">
                                 <rect key="frame" x="560" y="304" width="20" height="20"/>
                             </activityIndicatorView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="SaA-Bb-7Si" customClass="AlternateCell">
-                                <rect key="frame" x="20" y="334" width="560" height="266"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="SaA-Bb-7Si">
+                                <rect key="frame" x="20" y="334" width="560" height="258"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="65" id="XTD-Dj-upO" customClass="AlternateCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlternateCell" rowHeight="65" id="XTD-Dj-upO" customClass="AlternateCell">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XTD-Dj-upO" id="9Ta-Hg-R7b">
@@ -434,7 +442,7 @@
                             <constraint firstItem="AoH-4p-m3b" firstAttribute="centerY" secondItem="sO2-ns-UuV" secondAttribute="centerY" id="epT-cf-51g"/>
                             <constraint firstItem="DUU-am-6hm" firstAttribute="top" secondItem="epd-fN-Gr4" secondAttribute="bottom" constant="16" id="gQI-KV-AV2"/>
                             <constraint firstItem="pcJ-S4-bAk" firstAttribute="leading" secondItem="sEu-TO-c9k" secondAttribute="leading" constant="20" id="kvw-Cm-131"/>
-                            <constraint firstItem="vua-BT-uof" firstAttribute="top" secondItem="SaA-Bb-7Si" secondAttribute="bottom" id="mxh-We-tBl"/>
+                            <constraint firstItem="vua-BT-uof" firstAttribute="top" secondItem="SaA-Bb-7Si" secondAttribute="bottom" constant="8" id="mxh-We-tBl"/>
                             <constraint firstItem="Bvo-4u-xWg" firstAttribute="top" secondItem="pcJ-S4-bAk" secondAttribute="bottom" constant="8" id="oUn-g1-egY"/>
                             <constraint firstItem="pcJ-S4-bAk" firstAttribute="top" secondItem="DUU-am-6hm" secondAttribute="bottom" constant="8" id="oVN-wy-Hfi"/>
                             <constraint firstItem="epd-fN-Gr4" firstAttribute="top" secondItem="6gU-uj-u0m" secondAttribute="bottom" constant="25" id="oc4-UI-YJ7"/>
@@ -453,6 +461,7 @@
                         <outlet property="composition" destination="2XF-22-eGS" id="m0i-F8-aOf"/>
                         <outlet property="manufacturer" destination="URZ-i7-U42" id="v69-5A-C81"/>
                         <outlet property="medicineName" destination="epd-fN-Gr4" id="3BF-X9-dXy"/>
+                        <outlet property="medicineTableView" destination="SaA-Bb-7Si" id="deh-hl-PY3"/>
                         <outlet property="price" destination="Nrp-Ah-G3T" id="Fpc-tW-dpT"/>
                         <outlet property="tabletType" destination="8eo-R1-reo" id="bZb-Z3-FGv"/>
                         <outlet property="tablets" destination="Cmt-pQ-L4u" id="aEv-h7-gjM"/>
