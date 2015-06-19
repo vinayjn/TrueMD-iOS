@@ -25,7 +25,7 @@
 -(NSURLSession *)session{
     if (!_session) {
         sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
-        sessionConfiguration.timeoutIntervalForRequest = 15.0;
+        sessionConfiguration.timeoutIntervalForRequest = 10.0;
         _session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
     }
     return _session;
