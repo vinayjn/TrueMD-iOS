@@ -193,5 +193,10 @@
         }
     });
 }
+- (IBAction)goToTrueMD:(UIButton *)sender {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http:www.truemd.in"]];
+    
+}
 
 @end
