@@ -196,7 +196,12 @@
 - (IBAction)goToTrueMD:(UIButton *)sender {
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http:www.truemd.in"]];
+}
+
+- (IBAction)goToFAQs:(UIButton *)sender {
     
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/vinayjn/TrueMD-iOS/blob/master/README.md"]];
+
 }
 
 @end

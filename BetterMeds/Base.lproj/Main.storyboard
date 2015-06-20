@@ -99,9 +99,19 @@
                                     <action selector="goToTrueMD:" destination="qNC-wu-9pq" eventType="touchUpInside" id="NiF-IB-2gX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr4-hO-2hK">
+                                <rect key="frame" x="16" y="562" width="38" height="30"/>
+                                <state key="normal" title="FAQs">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToFAQs:" destination="qNC-wu-9pq" eventType="touchUpInside" id="HqV-zF-bcQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Rcq-cw-tFa" firstAttribute="top" secondItem="Qr4-hO-2hK" secondAttribute="bottom" constant="8" id="4QU-c4-sAd"/>
                             <constraint firstAttribute="centerX" secondItem="hd5-gb-Uka" secondAttribute="centerX" id="5AJ-IH-HKA"/>
                             <constraint firstItem="Leg-2q-5Re" firstAttribute="top" secondItem="963-UD-iD5" secondAttribute="bottom" constant="170" id="6Pm-5u-ziK"/>
                             <constraint firstItem="Y6O-gU-tw9" firstAttribute="leading" secondItem="lUX-nd-7wm" secondAttribute="leading" constant="40" id="9d6-vv-dEV"/>
@@ -112,6 +122,7 @@
                             <constraint firstItem="Rcq-cw-tFa" firstAttribute="top" secondItem="cnl-ve-EN1" secondAttribute="bottom" constant="8" id="VQE-is-L4N"/>
                             <constraint firstAttribute="trailing" secondItem="Y6O-gU-tw9" secondAttribute="trailing" constant="40" id="XF4-uD-f0F"/>
                             <constraint firstItem="Leg-2q-5Re" firstAttribute="bottom" secondItem="FP9-9A-dgY" secondAttribute="bottom" constant="7" id="Z1N-v1-Z2f"/>
+                            <constraint firstItem="Qr4-hO-2hK" firstAttribute="leading" secondItem="lUX-nd-7wm" secondAttribute="leading" constant="16" id="ZC2-vJ-mRx"/>
                             <constraint firstItem="z1w-WT-YBg" firstAttribute="top" secondItem="hd5-gb-Uka" secondAttribute="bottom" constant="8" id="bog-Ff-Mdb"/>
                             <constraint firstItem="Y6O-gU-tw9" firstAttribute="top" secondItem="Leg-2q-5Re" secondAttribute="bottom" constant="1" id="cO7-JR-3BQ"/>
                             <constraint firstAttribute="centerX" secondItem="Leg-2q-5Re" secondAttribute="centerX" id="cwx-Jg-QXq"/>
