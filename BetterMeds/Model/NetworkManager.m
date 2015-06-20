@@ -84,6 +84,13 @@
         if (error) {
             [self.delegate requestFailedWithError:(int)error.code];
             }
+        else if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+            
+            NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+        if (statusCode != 200) {
+                [self.delegate requestFailedWithError:NSURLErrorTimedOut];
+            }
+        }
         else if (dict){
             [self.delegate updateDataSourceWith:[dict valueForKeyPath:@"response.suggestions"]];
             }
