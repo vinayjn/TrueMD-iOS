@@ -6,6 +6,11 @@ The app searches for Generic Medicines using the [TrueMD]() api. The TrueMD api 
 - Searches for chaeper alternatives
 - Can give Details of a particular medicine
 
+# Demo 
+
+[Generic Medicines - Youtube](https://www.youtube.com/embed/neZEDUkj_c8)
+
+
 ###What are generic drugs?###
 
 A generic drug is identical -- or bioequivalent -- to a brand name drug in dosage form, safety, strength, route of administration, quality, performance characteristics and intended use. Although generic drugs are chemically identical to their branded counterparts, they are typically sold at substantial discounts from the branded price. According to the Congressional Budget Office, generic drugs save consumers an estimated $8 to $10 billion a year at retail pharmacies. Even more billions are saved when hospitals use generics.
