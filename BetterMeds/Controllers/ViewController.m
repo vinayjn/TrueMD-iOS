@@ -134,8 +134,9 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
     cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:16];
     cell.textLabel.text = [[medicineData objectAtIndex:indexPath.row] valueForKey:@"suggestion"];
     
     return cell;
@@ -172,7 +173,16 @@
             [[UIApplication sharedApplication] endIgnoringInteractionEvents];
             MedicineDetailsController *medicineDetailsController = [MedicineDetailsController new];
             medicineDetailsController.medicineDetails = (NSDictionary *)dataSource;
-            [self.navigationController pushViewController:medicineDetailsController animated:YES];
+            if([dataSource[@"constituents"] count]){
+                [self.navigationController pushViewController:medicineDetailsController animated:YES];
+            }else{
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"We cannot find data related to this medicine" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    
+                }];
+                [alert addAction:okAction];
+                [self presentViewController:alert animated:true completion:nil];
+            }
         }
     });
     
