@@ -51,7 +51,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [NetworkManager sharedInstance].delegate = self;
+    
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButton;
@@ -74,6 +74,11 @@
     [[NetworkManager sharedInstance] getMedicineAlternativesForID:[self.medicineDetails valueForKeyPath:@"medicine.brand"]];
     [self.indicator startAnimating];
     
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [NetworkManager sharedInstance].delegate = self;
 }
 
 #pragma mark - TableView DataSource
