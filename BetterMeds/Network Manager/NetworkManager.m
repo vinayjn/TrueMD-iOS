@@ -73,7 +73,7 @@
     NSString *requestString = [NSString stringWithFormat:@"%@%@",baseURL,pathComponent];
     
     NSURL *requestURL = [NSURL URLWithString:[requestString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-
+    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
     
     //request.timeoutInterval = 15.0;
@@ -81,19 +81,16 @@
     NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSError *jsonError;
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
+        NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
         if (error) {
             [self.delegate requestFailedWithError:(int)error.code];
-            }
-        else if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
-            
-            NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
-        if (statusCode != 200) {
-                [self.delegate requestFailedWithError:NSURLErrorTimedOut];
-            }
+        }
+        else if (statusCode != 200) {
+            [self.delegate requestFailedWithError:NSURLErrorTimedOut];
         }
         else if (dict){
             [self.delegate updateDataSourceWith:[dict valueForKeyPath:@"response.suggestions"]];
-            }
+        }
         
     }];
     
