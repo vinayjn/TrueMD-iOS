@@ -11,17 +11,17 @@ The app searches for Generic Medicines using the [TrueMD]() api. The TrueMD api 
 [Generic Medicines - Youtube](https://www.youtube.com/embed/neZEDUkj_c8)
 
 
-###What are generic drugs?###
+### What are generic drugs?###
 
 A generic drug is identical -- or bioequivalent -- to a brand name drug in dosage form, safety, strength, route of administration, quality, performance characteristics and intended use. Although generic drugs are chemically identical to their branded counterparts, they are typically sold at substantial discounts from the branded price. According to the Congressional Budget Office, generic drugs save consumers an estimated $8 to $10 billion a year at retail pharmacies. Even more billions are saved when hospitals use generics.
 
 Source : [FDA](http://www.fda.gov/Drugs/ResourcesForYou/Consumers/QuestionsAnswers/ucm100100.htm)
 
-###Are Generic Medicines safe??###
+### Are Generic Medicines safe?? ###
 
 ![Are Generic Medicines safe ?](http://www.truemd.in//assets/img/infographic.png)
 
-###Disclaimer###
+### Disclaimer ###
 
 While all care has been taken to ensure factual correctness of the data, the contents are for indicative information purposes only and we strongly advise you to consult qualified medical practitioners for authenticating the information.
 
@@ -33,7 +33,7 @@ We are not liable for any direct, indirect, incidental, special, consequential o
 - any other matter relating to the service.
 
 
-###Credits###
+### Credits ###
 
 The Generic drug database is being maintained by the [TrueMD](http://www.truemd.in/) team :
 
