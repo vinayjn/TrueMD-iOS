@@ -8,7 +8,7 @@ The app searches for Generic Medicines using the [TrueMD]() api. The TrueMD api 
 
 # Demo 
 
-[Generic Medicines - Youtube](https://www.youtube.com/embed/neZEDUkjc8)
+[Generic Medicines - Youtube](https://www.youtube.com/embed/neZEDUkj_c8)
 
 
 ### What are generic drugs? ###
